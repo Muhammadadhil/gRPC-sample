@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+service Courses {
+    rpc Find (CourseId) returns (Course) {}    
+}
+
+message CourseId {
+    uint32 id=1;
+}
+
+message Course {
+    uint32 id = 1;
+    string title = 2;
+    string major = 3;
+}
+
+
+
